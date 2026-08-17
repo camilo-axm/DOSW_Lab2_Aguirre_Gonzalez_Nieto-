@@ -150,6 +150,37 @@ A chef prepares customized hamburgers. A hamburger may include bread, meat, chee
 
 ### Evidence
 
+#### Maven Compilation
+The project was successfully compiled using Maven.
+<img width="926" height="540" alt="image" src="https://github.com/user-attachments/assets/249e4bdf-02b1-4bb5-8ef7-dce8a9fd3be8" />
+
+**Figure 1. Successful project compilation using Maven.**  
+The screenshot shows the execution of the `mvn clean compile` command. The `BUILD SUCCESS` message confirms that the project was successfully cleaned and compiled without compilation errors.
+
+
+#### User Selections
+
+<img width="952" height="585" alt="image" src="https://github.com/user-attachments/assets/af6aaab0-3d1c-4e33-a383-365fb23ff919" />
+
+**Figure 2. User selections during the customized hamburger creation process.**  
+The screenshot shows the interactive execution of Challenge 2, where the user selects the bread, meat, cheese, vegetables, sauce, and additional ingredients. This demonstrates that the hamburger can be customized step by step according to the user's choices.
+
+#### Final Customized Hamburger
+
+<img width="913" height="532" alt="image" src="https://github.com/user-attachments/assets/6ec3d00e-aa65-4cfc-b6f7-3eceb50b356c" />
+
+**Figure 3. Final customized hamburger and calculated price.**  
+The screenshot shows the final hamburger generated from the ingredients selected by the user. The system displays every selected ingredient and calculates the final price, which in this execution is COP $13,600. The successful Maven execution also confirms that the application completed without errors.
+
+### Relevant Tests
+
+<img width="951" height="536" alt="image" src="https://github.com/user-attachments/assets/7ff2f228-3dfc-4992-a4ba-dc535fffb27f" />
+
+**Figure 4. Successful execution of the automated tests.**  
+The screenshot shows the execution of `HamburgerBuilderTest`. A total of three tests were executed, with zero failures and zero errors. The `BUILD SUCCESS` message confirms that all tests were completed successfully.
+
+
+
 
 
 
