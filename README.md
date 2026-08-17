@@ -180,8 +180,65 @@ The screenshot shows the final hamburger generated from the ingredients selected
 The screenshot shows the execution of `HamburgerBuilderTest`. A total of three tests were executed, with zero failures and zero errors. The `BUILD SUCCESS` message confirms that all tests were completed successfully.
 
 
+## Challenge 7 — The Magic Remote Control
 
+A magic remote control executes actions on home devices such as:
 
+- Lights.
+- Doors.
+- Music systems.
+- Window blinds.
+
+Each action may have parameters and may be undone after execution.
+
+### Requirements
+
+- Support actions with parameters, such as:
+  - Setting volume.
+  - Adjusting a blind position.
+- Allow the user to execute any number of actions.
+- Register the user who executed each action.
+- Maintain a complete action history.
+- Allow any individual action to be undone.
+- Display a final summary containing:
+  - Executed actions.
+  - Users responsible for the actions.
+  - Undone actions.
+  - The final state or audit information required to identify who changed each device.
+
+### Design Pattern Documentation
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Behavioral** |
+| **Pattern Used** | **Command** |
+| **Justification** | We chose the Command pattern because each action performed on a device can be represented as an independent object that knows how to execute and undo itself. This allows us to decouple the invoker (RemoteControl) from the internal logic of each device (Light, Door, MusicSystem, and WindowBlinds). It also makes it easier to maintain a complete action history and undo individual actions by their ID. |
+| **How It Was Applied** | We created the Command interface with the methods execute(), undo(), getDescription(), and getUser(). Each concrete command implements the specific logic for its device, such as TurnOnLightCommand, SetVolumeCommand, AdjustBlindCommand, and OpenDoorCommand. Commands that modify a value, such as the volume or blind position, store the previous state (previousVolume, previousPosition) so it can be restored when undo() is called. The RemoteControl class acts as the invoker, executes the commands, maintains the action history, and allows individual actions to be undone by ID. The ActionRecord class stores the executed command together with its device, parameters, and status, allowing the complete execution history to be displayed. |
+
+### Audit Evidence
+
+The final output should make it possible to answer:
+
+- Who executed each action?
+    Action #1 was executed by Camilo.
+    Action #2 was executed by Camilo.
+    Action #3 was executed by Sara.
+    Action #4 was executed by Sara.
+  
+- Which actions were undone?
+    Action #2 was undone. This action set the music system volume to 70, and the undo operation restored the volume to 30.
+  
+- Which user changed each device?
+    Lights: Camilo turned the lights ON.
+    Music System: Camilo set the volume to 70.
+    Window Blinds: Sara adjusted the blinds to 80%.
+    Door: Sara opened the door.
+  
+-What is the complete execution history?
+    #1 — Camilo — Turn ON lights — EXECUTED
+    #2 — Camilo — Set volume to 70 — UNDONE
+    #3 — Sara — Adjust blinds to 80% — EXECUTED
+    #4 — Sara — Open door — EXECUTED
 
 
 
