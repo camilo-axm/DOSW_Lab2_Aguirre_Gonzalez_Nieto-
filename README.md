@@ -470,9 +470,12 @@ The screenshot shows the execution of Challenge 7 using the Command pattern. The
 **Figure 3. Complete action history and final device state.**  
 The screenshot shows the complete execution history of the Magic Remote Control. Each record includes the action ID, user, action, device, parameters, and execution status. Action #2 is marked as `UNDONE`, while the other actions remain `EXECUTED`. The final device state shows the lights as ON, the music volume at 30, the window blinds at 80%, and the door as OPEN. The `BUILD SUCCESS` message confirms that the application completed successfully without compilation or execution errors.
 
+## Revelant Tests
+
+<img width="673" height="591" alt="image" src="https://github.com/user-attachments/assets/10427f14-4d41-4061-b91f-da3549d89b01" />
+
 **Figure 4. Successful execution of the automated tests.**  
 The screenshot shows the execution of `Reto7Test` for Challenge 7. A total of 19 tests were executed, with zero failures, zero errors, and zero skipped tests. The tests verify command execution, individual action undo, device state changes, action history, and the behavior of the Magic Remote Control. The `BUILD SUCCESS` message confirms that all tests were completed successfully.
-<img width="673" height="591" alt="image" src="https://github.com/user-attachments/assets/10427f14-4d41-4061-b91f-da3549d89b01" />
 
 
 
