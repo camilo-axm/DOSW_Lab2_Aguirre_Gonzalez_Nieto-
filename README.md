@@ -118,3 +118,36 @@ dosw-lab-02/
             └── edu/
                 └── eci/
                     └── dosw/
+```
+
+
+## Challenge 2 — The Five-Star Chef
+
+A chef prepares customized hamburgers. A hamburger may include bread, meat, cheese, vegetables, sauces, and other optional ingredients.
+
+### Requirements
+
+- Build each hamburger step by step.
+- Allow the user to select custom ingredients.
+- Generate the final hamburger from the selected ingredients.
+- Use Java Streams to calculate the total price.
+- Display:
+  - Every selected ingredient.
+  - The final price.
+  - A final summary of the customized hamburger.
+
+### Design Pattern Documentation
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Creational** |
+| **Pattern Used** | **Builder** |
+| **Justification** | We chose the Builder pattern because a hamburger can be created with different combinations of ingredients. Some ingredients are optional, and the user can decide which ones to include. Using a builder allows us to create the hamburger step by step instead of having a constructor with many parameters. It also makes the code easier to read and modify when we want to add new ingredients. |
+| **How It Was Applied** | We created the `HamburgerBuilder` interface with the methods needed to build the hamburger, such as adding bread, meat, cheese, vegetables, sauces, and other ingredients. `ConcreteHamburgerBuilder` implements those methods and keeps the selected ingredients while the hamburger is being built. When the user finishes selecting the ingredients, the `build()` method creates the final `Hamburger` object. The `Reto2ChefHamburguesa` class is responsible for interacting with the user and sending their selections to the builder. Finally, the `Hamburger` calculates the total price using Java Streams and displays the selected ingredients and the final price. |
+
+### Evidence
+
+- Screenshot or console output showing user selections.
+- Screenshot or console output showing the final hamburger.
+- Relevant tests.
+- UML or class relationship diagram, when applicable.
