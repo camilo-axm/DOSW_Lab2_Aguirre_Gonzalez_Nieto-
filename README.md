@@ -122,7 +122,38 @@ dosw-lab-02/
 
 ## 8. Challenge development
 ## Challenge 1 - Don Pepe's Store
+Don Pepe owns a store, but his monthly accounts do not balance because sales and discount calculations are not properly organized.
 
+### Mission
+
+Build a simple and well-structured sales system that allows a customer to:
+
+1. Add products to a shopping cart.
+2. Receive a discount according to the customer type.
+3. Obtain a receipt containing:
+   - Purchased products.
+   - Total price.
+   - Applied discount.
+   - Final amount to pay.
+
+### Business Rules
+
+- New customers receive a **5% discount**.
+- Frequent customers receive a **10% discount**.
+- Product unit prices must not change after the product is created.
+- Class attributes must be encapsulated.
+- Access to state must occur through appropriate methods.
+- Java Streams must be used to process products and calculate totals.
+
+  
+### Design Pattern Documentation
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Tipo de patron** |
+| **Pattern Used** | **Patron que se uso** |
+| **Justification** | Poner justificacion |
+| **How It Was Applied** | como fue aplicado |
 
 ## Challenge 2 — The Five-Star Chef
 
@@ -178,6 +209,169 @@ The screenshot shows the final hamburger generated from the ingredients selected
 
 **Figure 4. Successful execution of the automated tests.**  
 The screenshot shows the execution of `HamburgerBuilderTest`. A total of three tests were executed, with zero failures and zero errors. The `BUILD SUCCESS` message confirms that all tests were completed successfully.
+
+## Challenge 3 — The Kingdom of Vehicles
+
+A dealership called **The Kingdom of Vehicles** sells land, water, and air vehicles.
+
+### Vehicle Families
+
+#### Land Vehicles
+
+- Cars.
+- Bicycles.
+- Motorcycles.
+
+#### Water Vehicles
+
+- Motorboats.
+- Sailboats.
+- Jet skis.
+
+#### Air Vehicles
+
+- Airplanes.
+- Light aircraft.
+- Helicopters.
+
+### Categories
+
+- Economy.
+- Luxury.
+- Used.
+
+Each category affects characteristics such as:
+
+- Maximum speed.
+- Comfort.
+- Price.
+- Equipment.
+
+### Requirements
+
+- Apply design patterns to the solution.
+- Allow the user to select any number of vehicles.
+- Allow selection by:
+  - Vehicle family.
+  - Category.
+  - Model.
+- Generate each requested vehicle.
+- Use Java Streams to calculate the total price.
+- Display a purchase summary for all selected vehicles.
+
+  
+### Design Pattern Documentation
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Tipo de patron** |
+| **Pattern Used** | **Patron que se uso** |
+| **Justification** | Poner justificacion |
+| **How It Was Applied** | como fue aplicado |
+
+
+
+## Challenge 4 — The Currency Exchange Scam
+
+A former currency exchange owner used the same exchange rate for every currency. The new owner needs a service that converts currencies using the correct rate.
+
+### Supported Example Currencies
+
+- USD.
+- EUR.
+- JPY.
+- COP.
+
+### Requirements
+
+- Accept any number of currencies supported by the solution.
+- Allow the user to enter multiple transactions.
+- Allow one source amount to be converted into one or more destination currencies.
+- Display:
+  - Original amount.
+  - Source currency.
+  - Converted amount.
+  - Destination currency.
+- Use Java Streams when totals from multiple transactions must be grouped or accumulated.
+
+### Design Pattern Documentation
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Tipo de patron** |
+| **Pattern Used** | **Patron que se uso** |
+| **Justification** | Poner justificacion |
+| **How It Was Applied** | como fue aplicado |
+
+
+
+## Challenge 5 — Customized Coffee
+
+A creative coffee shop allows customers to customize coffee by adding toppings, sauces, and complements. Each topping adds a price and may be combined with other toppings.
+
+The system must allow new toppings to be added without modifying the coffee base.
+
+### Requirements
+
+- Allow the user to select any number of toppings for each coffee.
+- Allow multiple coffees to be created in the same execution.
+- Display the final description and price of each coffee.
+- Use Java Streams to calculate:
+  - The total for each coffee, when appropriate.
+  - The total price of all coffees.
+- Allow new toppings to be added without changing the base coffee implementation.
+
+### Design Pattern Documentation
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Tipo de patron** |
+| **Pattern Used** | **Patron que se uso** |
+| **Justification** | Poner justificacion |
+| **How It Was Applied** | como fue aplicado |
+
+
+
+## Challenge 6 — Talk to Technical Support
+
+A technical support system receives tickets with different complexity levels:
+
+- Basic.
+- Intermediate.
+- Advanced.
+
+Each ticket also has a priority:
+
+- Low.
+- Medium.
+- High.
+
+Technicians have specialties and a maximum priority level that they can handle. When one technician cannot resolve a ticket, it must be passed to the next technician in the chain.
+
+### Requirements
+
+- Allow the user to enter any number of tickets.
+- Each ticket must include:
+  - Description.
+  - Difficulty level.
+  - Priority.
+- Use a **Chain of Responsibility** to process each ticket.
+- Display which technician resolved each ticket.
+- Mark unresolved tickets as pending escalation.
+- Use Java Streams to generate statistics, such as:
+  - Tickets by level.
+  - Resolved tickets.
+  - Pending tickets.
+  - Average priority of resolved tickets.
+
+### Design Pattern Documentation
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Tipo de patron** |
+| **Pattern Used** | **Patron que se uso** |
+| **Justification** | Poner justificacion |
+| **How It Was Applied** | como fue aplicado |
 
 
 ## Challenge 7 — The Magic Remote Control
@@ -257,6 +451,7 @@ Door: OPEN
 ### Evidence
 #### Maven Compilation
 The project was successfully compiled using Maven.
+
 <img width="646" height="460" alt="image" src="https://github.com/user-attachments/assets/3461b447-f500-4ecc-bd3a-068fbd54f3fe" />
 
 **Figure 1. Successful project compilation using Maven.**  
@@ -276,7 +471,150 @@ The screenshot shows the execution of Challenge 7 using the Command pattern. The
 The screenshot shows the complete execution history of the Magic Remote Control. Each record includes the action ID, user, action, device, parameters, and execution status. Action #2 is marked as `UNDONE`, while the other actions remain `EXECUTED`. The final device state shows the lights as ON, the music volume at 30, the window blinds at 80%, and the door as OPEN. The `BUILD SUCCESS` message confirms that the application completed successfully without compilation or execution errors.
 
 
+## Challenge 8 — The UML Zoo
 
+ECI Zoo needs a class design for a zoo management application.
+
+### Animals
+
+The zoo contains:
+
+- Mammals.
+- Reptiles.
+- Birds.
+
+Each animal has:
+
+- Name.
+- Age.
+- Characteristic sound.
+- Diet.
+- Preferred food.
+- Weight.
+- Height.
+- Health status:
+  - Healthy.
+  - Sick.
+  - Quarantine.
+- Habitat.
+
+### Caretakers
+
+Each caretaker has:
+
+- Name.
+- Age.
+- Specialty.
+- Associations with one or more animals.
+
+Caretakers may:
+
+- Feed animals.
+- Bathe animals.
+- Clean habitats.
+
+### Visitors
+
+Visitors may:
+
+- Register their name and age.
+- Select favorite animals.
+- Feed animals.
+- Give tips to caretakers.
+- Upload photographs of observed animals.
+
+### Dynamic Animal Attributes
+
+The design must support dynamic attributes such as:
+
+- Fur color.
+- Origin.
+- Rarity.
+- Medical history.
+### Required Deliverable
+
+Create a UML class diagram that applies:
+
+- SOLID principles.
+- Design patterns, when used.
+- Advanced object-oriented design.
+
+The UML diagram must include:
+
+- Inheritance.
+- Polymorphism.
+- Associations between caretakers and animals.
+- Associations between visitors, animals, and caretakers.
+- Relevant interaction methods.
+- Encapsulated attributes.
+- Getters and setters where required by the design.
+
+### UML Documentation
+
+#### Main Classes and Responsibilities
+
+| Class or Interface | Responsibility |
+|---|---|
+| TODO | TODO |
+
+#### Relationships
+
+| Source | Relationship | Target | Multiplicity | Explanation |
+|---|---|---|---|---|
+| TODO | TODO | TODO | TODO | TODO |
+
+#### SOLID Application
+
+| Principle | Application in the UML Design |
+|---|---|
+| Single Responsibility | TODO |
+| Open/Closed | TODO |
+| Liskov Substitution | TODO |
+| Interface Segregation | TODO |
+| Dependency Inversion | TODO |
+
+#### Design Patterns DOCUMENTATION
+
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | **Tipo de patron** |
+| **Pattern Used** | **Patron que se uso** |
+| **Justification** | Poner justificacion |
+| **How It Was Applied** | como fue aplicado |
+
+
+
+
+# 9. Team Members
+
+| Name | GitHub Username | Main Contributions |
+|---|---|---|
+| Camilo Aguirre | camilo-axm | Implemented Challenge 2 (Five-Star Chef) using the Builder pattern: BuilderBurger interface, BuilderBurgerImpl, Burger and Topping classes, plus ChefDirector for predefined recipes. Implemented Challenge 7 (Magic Remote Control) using the Command pattern: Command interface, RemoteControl invoker with action history and undo support, ActionRecord, and concrete commands (TurnOnLightCommand, SetVolumeCommand, AdjustBlindCommand, OpenDoorCommand). |
+| Sara Gonzalez | TODO | TODO |
+| Juan Nieto | TODO | TODO |
+
+
+# 10. Repository Evidence
+
+## Branching Strategy
+
+The team used a Git branching strategy to organize the development process and keep the `main` branch stable.
+
+- **`main`**: Contains the stable and final version of the project. Only completed and tested changes are merged into this branch.
+
+- **`develop`**: Used to integrate and test the work developed by the team before merging it into `main`.
+
+- **`feature/`**: Used for individual development tasks and challenges. Each team member can create a specific feature branch to work independently without affecting the stable code.
+
+### Team Feature Branches
+
+- **`/feature/CamiloAguirre_2026-2`**: Used by Camilo Aguirre to develop his assigned work for the semester.
+
+- **`/feature/Camilo_Aguirre_reto2`**: Used to develop and implement Challenge 2.
+
+- **`/feature/Camilo_Aguirre_reto7`**: Used to develop and implement Challenge 7
+
+The general workflow was to develop and test changes in feature branches, integrate them into `develop`, and finally merge the stable version into `main`.
 
 
 
