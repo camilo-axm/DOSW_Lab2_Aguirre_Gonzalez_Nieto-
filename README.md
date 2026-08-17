@@ -120,6 +120,9 @@ dosw-lab-02/
                     └── dosw/
 ```
 
+## Challenge development
+## Challenge 1 - Don Pepe's Store
+
 
 ## Challenge 2 — The Five-Star Chef
 
@@ -147,7 +150,10 @@ A chef prepares customized hamburgers. A hamburger may include bread, meat, chee
 
 ### Evidence
 
-- Screenshot or console output showing user selections.
-- Screenshot or console output showing the final hamburger.
-- Relevant tests.
-- UML or class relationship diagram, when applicable.
+
+
+
+
+
+
+
