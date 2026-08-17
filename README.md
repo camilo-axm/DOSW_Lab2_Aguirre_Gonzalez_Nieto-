@@ -215,30 +215,65 @@ Each action may have parameters and may be undone after execution.
 | **Justification** | We chose the Command pattern because each action performed on a device can be represented as an independent object that knows how to execute and undo itself. This allows us to decouple the invoker (RemoteControl) from the internal logic of each device (Light, Door, MusicSystem, and WindowBlinds). It also makes it easier to maintain a complete action history and undo individual actions by their ID. |
 | **How It Was Applied** | We created the Command interface with the methods execute(), undo(), getDescription(), and getUser(). Each concrete command implements the specific logic for its device, such as TurnOnLightCommand, SetVolumeCommand, AdjustBlindCommand, and OpenDoorCommand. Commands that modify a value, such as the volume or blind position, store the previous state (previousVolume, previousPosition) so it can be restored when undo() is called. The RemoteControl class acts as the invoker, executes the commands, maintains the action history, and allows individual actions to be undone by ID. The ActionRecord class stores the executed command together with its device, parameters, and status, allowing the complete execution history to be displayed. |
 
-### Audit Evidence
+
+## Audit Evidence
 
 The final output should make it possible to answer:
 
-- Who executed each action?
-    Action #1 was executed by Camilo.
-    Action #2 was executed by Camilo.
-    Action #3 was executed by Sara.
-    Action #4 was executed by Sara.
-  
-- Which actions were undone?
-    Action #2 was undone. This action set the music system volume to 70, and the undo operation restored the volume to 30.
-  
-- Which user changed each device?
-    Lights: Camilo turned the lights ON.
-    Music System: Camilo set the volume to 70.
-    Window Blinds: Sara adjusted the blinds to 80%.
-    Door: Sara opened the door.
-  
--What is the complete execution history?
-    #1 — Camilo — Turn ON lights — EXECUTED
-    #2 — Camilo — Set volume to 70 — UNDONE
-    #3 — Sara — Adjust blinds to 80% — EXECUTED
-    #4 — Sara — Open door — EXECUTED
+- **Who executed each action?**
+  - Action #1 was executed by **Camilo**.
+  - Action #2 was executed by **Camilo**.
+  - Action #3 was executed by **Sara**.
+  - Action #4 was executed by **Sara**.
+
+- **Which actions were undone?**
+  - **Action #2** was undone.
+  - This action set the music system volume to **70**, and the undo operation restored the volume to **30**.
+
+- **Which user changed each device?**
+  - **Lights:** Camilo turned the lights ON.
+  - **Music System:** Camilo set the volume to 70.
+  - **Window Blinds:** Sara adjusted the blinds to 80%.
+  - **Door:** Sara opened the door.
+
+- **What is the complete execution history?**
+
+  | Action | User | Description | Status |
+  |--------|------|-------------|--------|
+  | #1 | Camilo | Turn ON lights | EXECUTED |
+  | #2 | Camilo | Set volume to 70 | UNDONE |
+  | #3 | Sara | Adjust blinds to 80% | EXECUTED |
+  | #4 | Sara | Open door | EXECUTED |
+
+### Final Device State
+
+```text
+Lights: ON
+Music volume: 30
+Window blinds: 80%
+Door: OPEN
+```
+
+### Evidence
+#### Maven Compilation
+The project was successfully compiled using Maven.
+<img width="646" height="460" alt="image" src="https://github.com/user-attachments/assets/3461b447-f500-4ecc-bd3a-068fbd54f3fe" />
+
+**Figure 1. Successful project compilation using Maven.**  
+The screenshot shows the execution of the `mvn clean compile` command. The `BUILD SUCCESS` message confirms that the project was successfully cleaned and compiled without compilation errors.
+
+### Final Challenge 7 Execution
+<img width="662" height="293" alt="image" src="https://github.com/user-attachments/assets/c193214f-1f86-4785-a170-196a6c15a6b7" />
+
+**Figure 2. Successful execution of the Magic Remote Control.**  
+The screenshot shows the execution of Challenge 7 using the Command pattern. The system executes four actions on different home devices: turning on the lights, setting the music volume to 70, adjusting the window blinds to 80%, and opening the door. Each action is associated with the user who executed it. The screenshot also shows that action #2 was successfully undone, restoring the music volume to 30.
+
+### Action History and Final Device State
+
+<img width="684" height="346" alt="image" src="https://github.com/user-attachments/assets/6a2c475a-e2b9-4717-9876-25c4dbd9cab7" />
+
+**Figure 3. Complete action history and final device state.**  
+The screenshot shows the complete execution history of the Magic Remote Control. Each record includes the action ID, user, action, device, parameters, and execution status. Action #2 is marked as `UNDONE`, while the other actions remain `EXECUTED`. The final device state shows the lights as ON, the music volume at 30, the window blinds at 80%, and the door as OPEN. The `BUILD SUCCESS` message confirms that the application completed successfully without compilation or execution errors.
 
 
 
