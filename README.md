@@ -120,7 +120,7 @@ dosw-lab-02/
                     └── dosw/
 ```
 
-## Challenge development
+## 8. Challenge development
 ## Challenge 1 - Don Pepe's Store
 
 
