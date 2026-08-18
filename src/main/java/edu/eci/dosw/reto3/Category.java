@@ -32,4 +32,11 @@ public interface Category {
      * @return eturns a String with the equipment of the vehicle model plus what is added for being of this category.
      */
     String getEquipment(String modelEquipment);
+
+    /**
+     * return the type of this category
+     * 
+     * @return returns a String with the name of this category
+     */
+    String getType();
 }

@@ -47,4 +47,13 @@ public class EconomyCategory {
     public String getEquipment(String modelEquipment){
         return modelEquipment + "\n\tUser manual.\n\tStandard Warranty (1 year).";
     }
+
+    /**
+     * return the type of this category
+     * 
+     * @return returns a String with the name of this category
+     */
+    public String getType(){
+        return "economy";
+    }
 }

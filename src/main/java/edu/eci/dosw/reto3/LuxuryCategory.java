@@ -48,4 +48,13 @@ public class LuxuryCategory implements Category{
         return modelEquipment + "\n\tVIP maintenance service.\n\t24/7 customer support.\n\tStandard Warranty (1 year).";
     }
 
+    /**
+     * return the type of this category
+     * 
+     * @return returns a String with the name of this category
+     */
+    public String getType(){
+        return "luxury";
+    }
+
 }

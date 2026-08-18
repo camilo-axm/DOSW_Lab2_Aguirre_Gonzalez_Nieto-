@@ -46,4 +46,13 @@ public class UsedCategory {
     public String getEquipment(String modelEquipment){
         return modelEquipment + "\n\tStandard Warranty (3 months).";
     }
+
+    /**
+     * return the type of this category
+     * 
+     * @return returns a String with the name of this category
+     */
+    public String getType(){
+        return "Used";
+    }
 }
