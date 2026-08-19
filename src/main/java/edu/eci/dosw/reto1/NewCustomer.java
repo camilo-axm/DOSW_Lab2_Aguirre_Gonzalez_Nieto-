@@ -1,6 +1,10 @@
 package edu.eci.dosw.reto1;
 
-public class NewCustomer extends CustomerDiscountTest {
+/**
+ * Customer who receives a 5% discount.
+ */
+public class NewCustomer extends Customer {
+
     public NewCustomer(String name) {
         super(name, subtotal -> subtotal * 0.05);
     }

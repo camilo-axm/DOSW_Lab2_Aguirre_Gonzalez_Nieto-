@@ -1,7 +1,9 @@
 package edu.eci.dosw.reto1;
 
 public final class Product {
-    //Representa un producto y el precio*//
+/**
+ * Represents a product with an name and unit price.
+ */
 
     private final String name; //Nadie puede modificar ni cambiar//
     private final double unitPrice;
