@@ -343,11 +343,12 @@ The system must allow new toppings to be added without modifying the coffee base
 
 | Item | Team Explanation |
 |------|------------------|
-| **Design Pattern Category** | **Tipo de patron** |
-| **Pattern Used** | **Patron que se uso** |
-| **Justification** | Poner justificacion |
-| **How It Was Applied** | como fue aplicado |
+| **Design Pattern Category** | Structural |
+| **Pattern Used** | Decorator |
+| **Justification** | The Decorator pattern was used because the system should allow users to add any number of toppings to a coffee without modifying the base coffee, making it easier to add ingredients. |
+| **How It Was Applied** | Coffee defines the common interface for coffees. NormalCoffee represents the base coffee. ToppingDecorator takes a Coffee object and adds a description and price. Additional toppings extend ToppingDecorator, allowing users to combine multiple toppings. Java Streams are used to calculate the total price of the coffees. |
 
+<img width="1138" height="420" alt="image" src="https://github.com/user-attachments/assets/1d0424a6-687f-4ab3-8433-5175c48928df" />
 
 
 ## Challenge 6 — Talk to Technical Support
