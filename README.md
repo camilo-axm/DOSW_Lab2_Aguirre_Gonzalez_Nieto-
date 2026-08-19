@@ -145,15 +145,29 @@ Build a simple and well-structured sales system that allows a customer to:
 - Access to state must occur through appropriate methods.
 - Java Streams must be used to process products and calculate totals.
 
-  
+### Streams
+- map: retrieves product prices.
+- reduce: calculates the subtotal.
+- filter: identifies products based on a condition.
+- forEach: displays the products in the shopping cart.
+
+### Solid
+Polymorphism
+Encapsulation
+Immutability
+
 ### Design Pattern Documentation
 
 | Item | Team Explanation |
 |------|------------------|
-| **Design Pattern Category** | **Tipo de patron** |
-| **Pattern Used** | **Patron que se uso** |
-| **Justification** | Poner justificacion |
-| **How It Was Applied** | como fue aplicado |
+| **Design Pattern Category** | pattern of behavior |
+| **Pattern Used** | Strategy |
+| **Justification** | The Strategy pattern is used because the discount calculation changes when the customer type changes. This pattern allows for encapsulating the discount calculation method. |
+| **How It Was Applied** | The Discount class was created to calculate the discount. NewCustomer uses a 5% discount, and FrequentCustomer uses a 10% discount. The Customer class uses the received discount to calculate the discount. The strategies are implemented using lambda functions. |
+
+### Evidence 
+<img width="1222" height="523" alt="WhatsApp Image 2026-08-19 at 10 32 09 AM" src="https://github.com/user-attachments/assets/d899edc6-fe51-4580-ac70-9aaf11a2586d" />
+
 
 ## Challenge 2 — The Five-Star Chef
 
