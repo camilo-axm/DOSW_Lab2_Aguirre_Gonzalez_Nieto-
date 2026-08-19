@@ -622,7 +622,13 @@ The team used a Git branching strategy to organize the development process and k
 - **`/feature/Camilo_Aguirre_reto2`**: Used to develop and implement Challenge 2.
 
 - **`/feature/Camilo_Aguirre_reto7`**: Used to develop and implement Challenge 7
-
+- 
+- **`/feature/Sara_Gonzalez_reto1`**: Used to develop and implement Challenge 1
+  
+- **`/feature/Sara_Gonzalez_reto4`**: Used to develop and implement Challenge 4
+  
+- **`/feature/Sara_Gonzalez_reto5`**: Used to develop and implement Challenge 5
+  
 The general workflow was to develop and test changes in feature branches, integrate them into `develop`, and finally merge the stable version into `main`.
 
 
