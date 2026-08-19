@@ -312,10 +312,14 @@ A former currency exchange owner used the same exchange rate for every currency.
 
 | Item | Team Explanation |
 |------|------------------|
-| **Design Pattern Category** | **Tipo de patron** |
-| **Pattern Used** | **Patron que se uso** |
-| **Justification** | Poner justificacion |
-| **How It Was Applied** | como fue aplicado |
+| **Design Pattern Category** | Creational |
+| **Pattern Used** | Factory Method |
+| **Justification** | Factory was used so that the code that performs the conversions does not need to know the concrete implementations directly, but rather that function is delegated so that if a change is required it does not corrupt the main class. |
+| **How It Was Applied** | The Rates class receives the source and destination currencies and provides the corresponding converter with its specific rate. Each currency pair can have a different rate, thus avoiding the use of a single rate for all conversions. |
+
+### Evidence of the tests
+<img width="1342" height="517" alt="image" src="https://github.com/user-attachments/assets/46458854-dfe3-4f04-9bc6-19531fbc4e5f" />
+
 
 
 
