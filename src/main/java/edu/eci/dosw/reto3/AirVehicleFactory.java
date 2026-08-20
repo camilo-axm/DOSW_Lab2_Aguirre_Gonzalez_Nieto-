@@ -1,11 +1,11 @@
 package edu.eci.dosw.reto3;
 
-public class LandVehicleFactory implements VehicleFactory{
+public class AirVehicleFactory implements VehicleFactory{
     
     /**
-     * Create a land vehicle factory
+     * Create a Air vehicle factory
      */
-    public LandVehicleFactory(){}
+    public AirVehicleFactory(){}
 
     /**
      * returns a motorized vehicle of this factory
@@ -14,7 +14,7 @@ public class LandVehicleFactory implements VehicleFactory{
      * actions in its behaviors according to this factory.
      */
     public Vehicle getMotorizedVehicle(){
-        return new Car();
+        return new Airplane();
     }
 
     /**
@@ -24,7 +24,7 @@ public class LandVehicleFactory implements VehicleFactory{
      * actions in its behaviors according to this factory.
      */
     public Vehicle getLightVehicle(){
-        return new Bicycle();
+        return new LightAircraft();
     }
 
     /**
@@ -34,7 +34,7 @@ public class LandVehicleFactory implements VehicleFactory{
      * actions in its behaviors according to this factory.
      */
     public Vehicle getAgileVehicle(){
-        return new Motorcycle();
+        return new Helicopter();
     }
 
 }
