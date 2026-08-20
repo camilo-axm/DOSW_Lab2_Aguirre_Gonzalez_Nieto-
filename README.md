@@ -278,12 +278,39 @@ Each category affects characteristics such as:
 
 | Item | Team Explanation |
 |------|------------------|
-| **Design Pattern Category** | **Tipo de patron** |
-| **Pattern Used** | **Patron que se uso** |
-| **Justification** | Poner justificacion |
-| **How It Was Applied** | como fue aplicado |
+| **Design Pattern Category** | creational |
+| **Pattern Used** | Abstract Factory (families) + Factory Method (categories) |
+| **Justification** | You need to create families of related objects (vehicles through: land/water/air) without coupling the client to specific classes, and the categories are a product that through the factory method can be created and assigned only by interacting with the interface and maintaining low coupling |
+| **How It Was Applied** | VehicleFactory es la interfaz abstracta; cada XxxVehicleFactory crea la familia completa; Categorizer decide la categoría vía createCategory() |
 
+### Evidences
 
+<img width="1450" height="595" alt="image" src="https://github.com/user-attachments/assets/e9e88c0f-f32d-4cfe-b310-17cc8640350a" />
+
+**Figure 1.**
+successful compilation
+
+<img width="1452" height="594" alt="image" src="https://github.com/user-attachments/assets/140ab57f-57ca-4aaf-b19f-7049aa598839" />
+
+**Figure 2.**
+successful execution of automated tests.
+It is evident how the four tests carried out for different aspects of challenge three, such as the creation of the correct chosen classes, the calculation of data, their obtaining, the interaction and creation between classes, have been completed successfully, without any failure or error.
+
+<img width="437" height="196" alt="image" src="https://github.com/user-attachments/assets/4ef22a51-1c2a-4417-ba7e-a574998de0b0" />
+
+**Figure 3.**
+execution of the run method of challenge 3. it can be seen how a main menu is generated for the use of the application.
+
+<img width="390" height="675" alt="image" src="https://github.com/user-attachments/assets/b1b7a336-215c-4153-8bcf-e65823a5c2aa" />
+
+**Figure 4.**
+It can be seen how you can choose a vehicle by its type, model and category.
+
+<img width="384" height="656" alt="image" src="https://github.com/user-attachments/assets/4b9792db-467f-440f-ac8b-e451df9ff563" />
+
+**Figure 5.**
+Here the purchase summary is shown with the vehicles obtained, their specifications 
+and at the end the subtotal, a possible discount that can be entered and the total to be paid.
 
 ## Challenge 4 — The Currency Exchange Scam
 
