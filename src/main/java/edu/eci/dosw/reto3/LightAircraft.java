@@ -1,0 +1,39 @@
+package edu.eci.dosw.reto3;
+
+public class LightAircraft extends Vehicle{
+
+    /**
+     * create a LightAircraft
+     * 
+     * @param maxSpeed maximum speed of the vehicle model
+     * @param price price of the vehicle model
+     */
+    public LightAircraft(){
+        super(300, 15000, null);
+    }
+
+    /**
+     * Returns the description of the equipment that comes with the vehicle.
+     * 
+     * @return String with the description of the equipment that comes with the vehicle.
+     */
+    public String generatedEquiment(){
+        StringBuilder data = new StringBuilder();
+
+        data.append("\n\t").append("analog instrument panel.").append("\n\t");
+        data.append("\n\t").append("navigation GPS.").append("\n\t");
+        data.append("\n\t").append("auxiliary fuel tank.");
+
+        return data.toString();
+    }
+
+    /**
+     * returns the type of this vehicle
+     * 
+     * @return returns a String that contains the type of family group to which this vehicle belongs
+     */
+    public String getType(){
+        return "lightaircraft";
+    }
+
+}
