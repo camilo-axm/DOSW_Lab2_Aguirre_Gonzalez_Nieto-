@@ -130,7 +130,6 @@ public final class Reto3TheKingdomofVehicles{
         }
 
         category.assignCategory(vehicleSelected);
-        sc.close();
 
         return vehicleSelected;
 
