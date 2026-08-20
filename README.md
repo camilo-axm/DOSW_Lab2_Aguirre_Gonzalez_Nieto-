@@ -618,9 +618,7 @@ The UML diagram must include:
 | Name | GitHub Username | Main Contributions |
 |---|---|---|
 | Camilo Aguirre | camilo-axm | Implemented Challenge 2 (Five-Star Chef) using the Builder pattern: BuilderBurger interface, BuilderBurgerImpl, Burger and Topping classes, plus ChefDirector for predefined recipes. Implemented Challenge 7 (Magic Remote Control) using the Command pattern: Command interface, RemoteControl invoker with action history and undo support, ActionRecord, and concrete commands (TurnOnLightCommand, SetVolumeCommand, AdjustBlindCommand, OpenDoorCommand). |
-| Sara Gonzalez | soffgnzlz11 | Challenge 1 (Don Pepe's Store) was implemented using the Strategy pattern, with the classes Customer, Discount, Product, NewCustomer, FrequentCustomer, Shoppingcart, and Reto1TiendaDonPepe. |
-| Challenge 4 (The Currency Exchange Scam) was implemented using the Factory Method pattern, with the classes Reto4, ConversionTransaction, Converter, ConverterCurrency, Currency, ExchangeRate, and Rates, where the Factory was applied. |
-| Challenge 5 (Customized Coffee) was implemented using the Decorator pattern, with the classes Reto5, Coffee, NormalCoffe, Topping, ToppingDecorator and CoffeDecorator where the Decorator pattern was applied. |
+| Sara Gonzalez | soffgnzlz11 | Challenge 1 (Don Pepe's Store) was implemented using the Strategy pattern, with the classes Customer, Discount, Product, NewCustomer, FrequentCustomer, Shoppingcart, and Reto1TiendaDonPepe. Challenge 4 (The Currency Exchange Scam) was implemented using the Factory Method pattern, with the classes Reto4, ConversionTransaction, Converter, ConverterCurrency, Currency, ExchangeRate, and Rates, where the Factory was applied. Challenge 5 (Customized Coffee) was implemented using the Decorator pattern, with the classes Reto5, Coffee, NormalCoffe, Topping, ToppingDecorator and CoffeDecorator where the Decorator pattern was applied.|
 | Juan Nieto | TODO | TODO |
 
 
