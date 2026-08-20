@@ -610,35 +610,69 @@ The UML diagram must include:
 
 | Class or Interface | Responsibility |
 |---|---|
-| TODO | TODO |
+| Animal | She is responsible for managing general data and everything related to an animal, regardless of its specific class. it servers as template for specific type of Animals.|
+| AnimalDecorator | It is responsible for creating and managing a given animal, taking into account new factors added when it is enveloped within this decorator; it serves as a template for specific decorators that, in this case, add attributes to make attributes dynamic. |
+| HealthSatatus | It is an interface that functions as a template to generate health states, and each concrete class defines the behaviors for its state; it is assigned to animals to give them a specific health state. |
+| Caretaker | He is the caretaker of the animals, he has behaviors to interact with them, in addition to knowing which ones are in his care. |
+| Visitor | This class represents zoo visitors. It has behaviors for interacting with keepers and animals, and can also define and save animals that the visitor likes. |
 
 #### Relationships
 
 | Source | Relationship | Target | Multiplicity | Explanation |
 |---|---|---|---|---|
-| TODO | TODO | TODO | TODO | TODO |
+| FurColorDecorator | Generalization | AnimalDecorator | N/A | FurColorDecorator extends AnimalDecorator to add fur color information to a decorated animal. |
+| OriginDecorator | Generalization | AnimalDecorator | N/A | OriginDecorator extends AnimalDecorator to add origin information to a decorated animal. |
+| RarityDecorator | Generalization | AnimalDecorator | N/A | RarityDecorator extends AnimalDecorator to add rarity information to a decorated animal. |
+| MedicalHistoryDecorator | Generalization | AnimalDecorator | N/A | MedicalHistoryDecorator extends AnimalDecorator to add medical history information to a decorated animal. |
+| AnimalDecorator | Generalization | Animal | N/A | AnimalDecorator inherits from Animal so decorators can be used polymorphically as if they were the Animal they wrap (Decorator pattern). |
+| AnimalDecorator | Composition (wrappedAnimal) | Animal | 0 - 1 | Each AnimalDecorator holds and wraps exactly one Animal instance that it decorates. |
+| Mammal | Generalization | Animal | N/A | Mammal is a concrete subclass of the abstract class Animal. |
+| Reptile | Generalization | Animal | N/A | Reptile is a concrete subclass of the abstract class Animal. |
+| Bird | Generalization | Animal | N/A | Bird is a concrete subclass of the abstract class Animal. |
+| Animal | Composition (healthStatus) | HealthStatus | 0 - 1 | Each Animal owns exactly one HealthStatus object representing its current health condition. |
+| Healthy | Realization | HealthStatus | N/A | Healthy implements the HealthStatus interface, defining behavior for a healthy animal state. |
+| Sick | Realization | HealthStatus | N/A | Sick implements the HealthStatus interface, defining behavior for a sick animal state. |
+| Quarantine | Realization | HealthStatus | N/A | Quarantine implements the HealthStatus interface, defining behavior for an animal in quarantine. |
+| Caretaker | Association (animalsInCharge) | Animal | 0 - * | A Caretaker can be responsible for multiple animals (feeding, bathing, cleaning habitat). |
+| Visitor | Association (favoriteAnimals) | Animal | 0 - * | A Visitor can mark multiple animals as favorites and interact with them (feed, upload photograph). |
+| Visitor | Dependency | Caretaker | N/A | Visitor depends on Caretaker because its tipCaretaker() method uses Caretaker as a parameter. |
 
 #### SOLID Application
 
 | Principle | Application in the UML Design |
 |---|---|
-| Single Responsibility | TODO |
-| Open/Closed | TODO |
-| Liskov Substitution | TODO |
-| Interface Segregation | TODO |
-| Dependency Inversion | TODO |
+| Single Responsibility | Each class has one clear responsibility: `Animal` manages core animal data and behavior, `Caretaker` handles feeding/bathing/habitat cleaning, `Visitor` handles visiting-related actions, and each concrete decorator (`FurColorDecorator`, `OriginDecorator`, `RarityDecorator`, `MedicalHistoryDecorator`) is responsible for adding exactly one piece of extra information to an animal. |
+| Open/Closed | The `AnimalDecorator` abstract class allows new decorators (e.g., a future `SizeDecorator`) to be added without modifying the existing `Animal` class or other decorators. Likewise, new `HealthStatus` implementations (like `Healthy`, `Sick`, `Quarantine`) can be added without changing the `HealthStatus` interface or classes that depend on it. |
+| Liskov Substitution | Subclasses `Mammal`, `Reptile`, and `Bird` can be used wherever an `Animal` is expected without breaking behavior, since they override `getSound()` and `getDiet()` while preserving the base contract. Similarly, `AnimalDecorator` (and its subclasses) can be used anywhere an `Animal` is expected, and any `HealthStatus` implementation (`Healthy`, `Sick`, `Quarantine`) can replace another without breaking the `Animal` class that uses it. |
+| Interface Segregation | The `HealthStatus` interface only exposes the methods relevant to health state (`canBeVisited()`, `requiresSpecialCare()`, `describe()`), so implementing classes are not forced to depend on unrelated methods outside their concern. |
+| Dependency Inversion | `Animal` depends on the `HealthStatus` abstraction (interface) rather than on concrete classes like `Healthy` or `Sick`, allowing the health status implementation to vary independently. Similarly, `AnimalDecorator` depends on the abstract `Animal` type rather than a specific concrete animal subclass, enabling decorators to wrap any kind of animal. |
 
 #### Design Patterns DOCUMENTATION
 
 | Item | Team Explanation |
 |------|------------------|
-| **Design Pattern Category** | **Tipo de patron** |
-| **Pattern Used** | **Patron que se uso** |
-| **Justification** | Poner justificacion |
-| **How It Was Applied** | como fue aplicado |
+| **Design Pattern Category** | Structural Pattern |
+| **Pattern Used** | Decorator |
+| **Justification** | The zoo needs to add optional, combinable characteristics to an animal (fur color, origin, rarity, medical history) without modifying the `Animal` class or creating an explosion of subclasses for every possible combination of attributes. |
+| **How It Was Applied** | The abstract class `AnimalDecorator` implements/extends `Animal` and holds a `wrappedAnimal` reference (composition). Concrete decorators (`FurColorDecorator`, `OriginDecorator`, `RarityDecorator`, `MedicalHistoryDecorator`) extend `AnimalDecorator`, each adding one new attribute and its corresponding behavior, while still being usable as an `Animal` and allowing decorators to be stacked on top of one another. |
 
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | Behavioral Pattern |
+| **Pattern Used** | Strategy |
+| **Justification** | An animal's health condition determines different behaviors (whether it can be visited, whether it requires special care), and this condition can change over time (healthy → sick → quarantine). Instead of using conditional logic inside `Animal`, each health state is encapsulated as an interchangeable algorithm/strategy. |
+| **How It Was Applied** | The `HealthStatus` interface defines the common operations (`canBeVisited()`, `requiresSpecialCare()`, `describe()`), and the concrete classes `Healthy`, `Sick`, and `Quarantine` provide their own implementation of these operations. `Animal` holds a reference to a `HealthStatus` object (composition) and delegates health-related behavior to it through `getHealthStatus()` and `setHealthStatus()`, allowing the strategy to be swapped at runtime. |
 
+| Item | Team Explanation |
+|------|------------------|
+| **Design Pattern Category** | Object-Oriented Principle (Class Hierarchy) |
+| **Pattern Used** | Inheritance |
+| **Justification** | Different types of animals (mammals, reptiles, birds) share common attributes and behaviors (name, age, habitat, health status) but differ in specific behaviors such as the sound they make and their diet, so a common base class with specialized subclasses avoids code duplication. |
+| **How It Was Applied** | The abstract class `Animal` defines shared attributes (`name`, `age`, `weight`, `height`, `habitat`) and shared/abstract methods (`getSound()`, `getDiet()`), while `Mammal`, `Reptile`, and `Bird` extend `Animal` and override `getSound()` and `getDiet()` with their own specific implementations. |
 
+#### Diagram
+
+<img width="1905" height="1304" alt="reto8-zoo-class-diagram" src="https://github.com/user-attachments/assets/f2371fa6-7495-4f37-ae92-30941f677b9f" />
 
 # 9. Team Members
 
