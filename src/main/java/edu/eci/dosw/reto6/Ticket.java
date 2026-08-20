@@ -28,6 +28,10 @@ public class Ticket {
         return description;
     }
 
+    public Technician getResolver(){
+        return resolvedBy;
+    }
+
     public boolean isResolved(){
         return resolvedBy != null;
     }
