@@ -1,6 +1,6 @@
 package edu.eci.dosw.reto3;
 
-public class UsedCategorizer {
+public class UsedCategorizer extends Categorizer{
     
     /**
      * Create a specific category for this factory

@@ -11,8 +11,6 @@ public abstract class Vehicle {
      * 
      * @param maxSpeed maximum speed of the vehicle model
      * @param price price of the vehicle model
-     * @param category vehicle category
-     * @param equipment equipment that comes with the vehicle model.
      */
     protected Vehicle(float maxSpeed, float price, Category category){
 
@@ -92,9 +90,18 @@ public abstract class Vehicle {
         data.append("type: ").append(getType()).append("\n");
         data.append("category: ").append(getCategory()).append("\n");
         data.append("maxSpeed: ").append(getMaxSpeed()).append("\n");
-        data.append("price: ").append(getPrice()).append("\n");
+        data.append("price: $").append(getPrice()).append(" US\n");
         data.append("special equipment: ").append(getEquipment()).append("\n");
 
         return data.toString();
+    }
+
+    /**
+     * assigns a category to the vehicle
+     * 
+     * @param category category to be assigned to the vehicle
+     */
+    public void setCategory(Category category){
+        this.category = category;
     }
 }
