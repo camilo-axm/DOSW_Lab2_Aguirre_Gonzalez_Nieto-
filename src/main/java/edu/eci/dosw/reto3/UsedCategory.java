@@ -1,6 +1,6 @@
 package edu.eci.dosw.reto3;
 
-public class UsedCategory {
+public class UsedCategory implements Category{
     /**
      * creates the Used Category
      */

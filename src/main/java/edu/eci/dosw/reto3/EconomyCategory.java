@@ -1,6 +1,6 @@
 package edu.eci.dosw.reto3;
 
-public class EconomyCategory {
+public class EconomyCategory implements Category{
     
     /**
      * creates the Economy Category
