@@ -21,9 +21,9 @@ public class Car extends Vehicle{
         StringBuilder data = new StringBuilder();
         
         data.append("\n\t").append("air conditioning.").append("\n\t");
-        data.append("\n\t").append("radio/audio system.").append("\n\t");
-        data.append("\n\t").append("airbags.").append("\n\t");
-        data.append("\n\t").append("alloy wheels.");
+        data.append("radio/audio system.").append("\n\t");
+        data.append("airbags.").append("\n\t");
+        data.append("alloy wheels.");
 
         return data.toString();
     }
@@ -34,7 +34,7 @@ public class Car extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "car";
+        return "Land Vehicle";
     }
 
 }

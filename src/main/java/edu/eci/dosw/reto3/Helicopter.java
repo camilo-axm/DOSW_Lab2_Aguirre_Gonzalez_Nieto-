@@ -21,8 +21,8 @@ public class Helicopter extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("tail rotor.").append("\n\t");
-        data.append("\n\t").append("landing skids.").append("\n\t");
-        data.append("\n\t").append("radio communication system.");
+        data.append("landing skids.").append("\n\t");
+        data.append("radio communication system.");
 
         return data.toString();
     }
@@ -33,7 +33,7 @@ public class Helicopter extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "helicopter";
+        return "Air Vehicle";
     }
 
 }

@@ -21,9 +21,9 @@ public class Motorcycle extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("included helmet.").append("\n\t");
-        data.append("\n\t").append("rearview mirrors.").append("\n\t");
-        data.append("\n\t").append("ABS braking system.").append("\n\t");
-        data.append("\n\t").append("rear storage box.");
+        data.append("rearview mirrors.").append("\n\t");
+        data.append("ABS braking system.").append("\n\t");
+        data.append("rear storage box.");
 
         return data.toString();
     }
@@ -34,7 +34,7 @@ public class Motorcycle extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "motorcycle";
+        return "Land Vehicle";
     }
 
 }

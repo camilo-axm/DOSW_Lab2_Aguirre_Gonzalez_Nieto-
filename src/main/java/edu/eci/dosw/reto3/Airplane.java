@@ -21,9 +21,9 @@ public class Airplane extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("avionics system.").append("\n\t");
-        data.append("\n\t").append("landing gear.").append("\n\t");
-        data.append("\n\t").append("weather radar.").append("\n\t");
-        data.append("\n\t").append("executive seating.");
+        data.append("landing gear.").append("\n\t");
+        data.append("weather radar.").append("\n\t");
+        data.append("executive seating.");
 
         return data.toString();
     }
@@ -34,7 +34,7 @@ public class Airplane extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "airplane";
+        return "Air Vehicle";
     }
 
 }

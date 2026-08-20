@@ -21,8 +21,8 @@ public class LightAircraft extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("analog instrument panel.").append("\n\t");
-        data.append("\n\t").append("navigation GPS.").append("\n\t");
-        data.append("\n\t").append("auxiliary fuel tank.");
+        data.append("navigation GPS.").append("\n\t");
+        data.append("auxiliary fuel tank.");
 
         return data.toString();
     }
@@ -33,7 +33,7 @@ public class LightAircraft extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "lightaircraft";
+        return "Air Vehicle";
     }
 
 }

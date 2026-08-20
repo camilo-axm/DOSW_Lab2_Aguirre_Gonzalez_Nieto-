@@ -21,9 +21,9 @@ public class Bicycle extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("gear shifting system.").append("\n\t");
-        data.append("\n\t").append("disc brakes.").append("\n\t");
-        data.append("\n\t").append("reflective lights.").append("\n\t");
-        data.append("\n\t").append("cargo rack.");
+        data.append("disc brakes.").append("\n\t");
+        data.append("reflective lights.").append("\n\t");
+        data.append("cargo rack.");
 
         return data.toString();
     }
@@ -34,7 +34,7 @@ public class Bicycle extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "bicycle";
+        return "Land Vehicle";
     }
 
 }

@@ -21,8 +21,8 @@ public class JetSki extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("safety kill switch cord.").append("\n\t");
-        data.append("\n\t").append("padded seat.").append("\n\t");
-        data.append("\n\t").append("waterproof storage compartment.");
+        data.append("padded seat.").append("\n\t");
+        data.append("waterproof storage compartment.");
 
         return data.toString();
     }
@@ -33,7 +33,7 @@ public class JetSki extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "jetski";
+        return "Water vehicle";
     }
 
 }

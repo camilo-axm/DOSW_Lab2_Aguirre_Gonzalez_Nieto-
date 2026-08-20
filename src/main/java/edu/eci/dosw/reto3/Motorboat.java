@@ -21,9 +21,9 @@ public class Motorboat extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("outboard motor.").append("\n\t");
-        data.append("\n\t").append("life jackets.").append("\n\t");
-        data.append("\n\t").append("nautical GPS.").append("\n\t");
-        data.append("\n\t").append("depth sounder.");
+        data.append("life jackets.").append("\n\t");
+        data.append("nautical GPS.").append("\n\t");
+        data.append("depth sounder.");
 
         return data.toString();
     }
@@ -34,7 +34,7 @@ public class Motorboat extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "motorboat";
+        return "Water vehicle";
     }
 
 }

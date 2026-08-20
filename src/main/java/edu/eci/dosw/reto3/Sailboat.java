@@ -21,9 +21,9 @@ public class Sailboat extends Vehicle{
         StringBuilder data = new StringBuilder();
 
         data.append("\n\t").append("main sail and jib.").append("\n\t");
-        data.append("\n\t").append("rudder.").append("\n\t");
-        data.append("\n\t").append("anchor.").append("\n\t");
-        data.append("\n\t").append("nautical compass.");
+        data.append("rudder.").append("\n\t");
+        data.append("anchor.").append("\n\t");
+        data.append("nautical compass.");
 
         return data.toString();
     }
@@ -34,7 +34,7 @@ public class Sailboat extends Vehicle{
      * @return returns a String that contains the type of family group to which this vehicle belongs
      */
     public String getType(){
-        return "sailboat";
+        return "Water vehicle";
     }
 
 }
