@@ -90,6 +90,8 @@ public class reto6TalkToTechnicalSupport {
             (t.isResolved() ? "Resuelto por: " + t.getResolver().getName() : "PENDIENTE")
         ));
 
+        System.out.println("\n========== Estadisticas ===========\n");
+
         mostrarEstadisticas(tickets);
 
         sc.close();
