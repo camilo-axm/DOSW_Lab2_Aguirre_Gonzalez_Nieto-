@@ -347,6 +347,10 @@ A former currency exchange owner used the same exchange rate for every currency.
 ### Evidence of the tests
 <img width="1342" height="517" alt="image" src="https://github.com/user-attachments/assets/46458854-dfe3-4f04-9bc6-19531fbc4e5f" />
 
+### Evidence compilation
+<img width="440" height="198" alt="image" src="https://github.com/user-attachments/assets/4df44c8e-d789-4510-961f-b28287ce2314" />
+<img width="892" height="312" alt="image" src="https://github.com/user-attachments/assets/771de83c-6f2e-48ff-8486-a4319863028b" />
+<img width="1411" height="631" alt="image" src="https://github.com/user-attachments/assets/54e31eec-663e-4554-afb9-1c094077b5b8" />
 
 
 
