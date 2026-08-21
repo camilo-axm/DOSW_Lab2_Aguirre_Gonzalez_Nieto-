@@ -2,9 +2,9 @@ package edu.eci.dosw.reto5;
 
 import java.util.List;
 
-public final class Reto5 {
+public final class Reto_5 {
 
-    private Reto5() {
+    private Reto_5() {
     }
 
     public static void run() {
