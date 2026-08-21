@@ -165,6 +165,10 @@ Immutability
 | **Justification** | The Strategy pattern is used because the discount calculation changes when the customer type changes. This pattern allows for encapsulating the discount calculation method. |
 | **How It Was Applied** | The Discount class was created to calculate the discount. NewCustomer uses a 5% discount, and FrequentCustomer uses a 10% discount. The Customer class uses the received discount to calculate the discount. The strategies are implemented using lambda functions. |
 
+### Merge
+<img width="373" height="40" alt="image" src="https://github.com/user-attachments/assets/98929583-b577-401a-903f-bb724de841e5" />
+
+
 ### Evidence Tests
 <img width="1222" height="523" alt="WhatsApp Image 2026-08-19 at 10 32 09 AM" src="https://github.com/user-attachments/assets/d899edc6-fe51-4580-ac70-9aaf11a2586d" />
 
@@ -351,6 +355,9 @@ A former currency exchange owner used the same exchange rate for every currency.
 | **Pattern Used** | Factory Method |
 | **Justification** | Factory was used so that the code that performs the conversions does not need to know the concrete implementations directly, but rather that function is delegated so that if a change is required it does not corrupt the main class. |
 | **How It Was Applied** | The Rates class receives the source and destination currencies and provides the corresponding converter with its specific rate. Each currency pair can have a different rate, thus avoiding the use of a single rate for all conversions. |
+
+### Merge
+
 
 ### Evidence of the tests
 <img width="1342" height="517" alt="image" src="https://github.com/user-attachments/assets/46458854-dfe3-4f04-9bc6-19531fbc4e5f" />
