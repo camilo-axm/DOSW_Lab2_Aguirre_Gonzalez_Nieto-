@@ -6,9 +6,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class reto6TalkToTechnicalSupport {
+public class Reto6TalkToTechnicalSupport {
     
-    private reto6TalkToTechnicalSupport() {
+    private Reto6TalkToTechnicalSupport() {
     }
 
     public static void run() {
