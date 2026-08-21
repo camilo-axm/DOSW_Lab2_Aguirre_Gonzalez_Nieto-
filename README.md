@@ -170,7 +170,7 @@ Immutability
 
 ### Evidence Compilation
 <img width="1283" height="475" alt="image" src="https://github.com/user-attachments/assets/61b8b94b-82b6-4f39-a829-d946f4d887e4" />
-////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 
 <img width="1228" height="617" alt="image" src="https://github.com/user-attachments/assets/d1032314-952a-4834-a5fc-577077451733" />
 
@@ -357,10 +357,10 @@ A former currency exchange owner used the same exchange rate for every currency.
 
 ### Evidence compilation
 <img width="440" height="198" alt="image" src="https://github.com/user-attachments/assets/4df44c8e-d789-4510-961f-b28287ce2314" />
-
+/////////////////////////////////////////////////////////////////////////////
 
 <img width="892" height="312" alt="image" src="https://github.com/user-attachments/assets/771de83c-6f2e-48ff-8486-a4319863028b" />
-
+/////////////////////////////////////////////////////////////////////////////
 
 <img width="1411" height="631" alt="image" src="https://github.com/user-attachments/assets/54e31eec-663e-4554-afb9-1c094077b5b8" />
 
@@ -396,6 +396,7 @@ The system must allow new toppings to be added without modifying the coffee base
 
 ### Evidence Compilation
 <img width="840" height="645" alt="image" src="https://github.com/user-attachments/assets/8266aaa2-ea64-4106-a652-fb65fa86ad72" />
+/////////////////////////////////////////////////////////////////////////////
 
 <img width="872" height="306" alt="image" src="https://github.com/user-attachments/assets/cb230405-38c6-4f67-b6fb-526ed47aff36" />
 
