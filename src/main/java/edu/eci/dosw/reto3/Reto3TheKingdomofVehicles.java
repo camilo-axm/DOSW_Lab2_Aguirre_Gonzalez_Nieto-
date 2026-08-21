@@ -29,7 +29,7 @@ public final class Reto3TheKingdomofVehicles{
 
             switch (selectedOption){
                 case 1:
-                    selectedVehicles.add(selectVehicle());
+                    selectedVehicles.add(selectVehicle(scanner));
                     break;
                 case 2:
                     System.out.println("Enter a discount (eje 0,10 para 10%)");
@@ -50,9 +50,8 @@ public final class Reto3TheKingdomofVehicles{
      * method to begin the process of selecting a vehicle by 
      * its type, category and particular selection.
      */
-    private static Vehicle selectVehicle(){
+    private static Vehicle selectVehicle(Scanner sc){
 
-        Scanner sc = new Scanner(System.in);
 
         System.out.println("Select the type of vehicle you want.");
         System.out.println("\t1. Land Vehicle.");
