@@ -413,12 +413,34 @@ Technicians have specialties and a maximum priority level that they can handle. 
 ### Design Pattern Documentation
 
 | Item | Team Explanation |
-|------|------------------|
-| **Design Pattern Category** | **Tipo de patron** |
-| **Pattern Used** | **Patron que se uso** |
-| **Justification** | Poner justificacion |
-| **How It Was Applied** | como fue aplicado |
+|---|---|
+| Design Pattern Category | Behavioral (Comportamiento) |
+| Pattern Used | Chain of Responsibility |
+| Justification | Un ticket puede ser resuelto por distintos técnicos según su nivel de dificultad, sin que quien crea el ticket sepa cuál técnico lo atenderá. Chain of Responsibility permite desacoplar al emisor de la solicitud de quién finalmente la procesa, y facilita agregar o reordenar técnicos sin modificar el código existente (cumple Open/Closed). |
+| How It Was Applied | Se creó la clase abstracta `Technician`, que define el método `attend(Ticket)`: si el técnico puede resolver el ticket según su `maximumManageableDifficulty`, lo resuelve; si no, lo delega a su `supervisor` (siguiente eslabón). Las subclases `NoviceTechnician`, `IntermediateTechnician` y `SeniorTechnician` solo definen su nivel máximo. Los técnicos se encadenan con `setSupervisor()` (novice → intermediate → senior), y cada ticket se envía al primer eslabón (`novice.attend(ticket)`), escalando automáticamente hasta ser resuelto o quedar pendiente si nadie en la cadena puede atenderlo. |
 
+#### Evidence
+
+<img width="1432" height="564" alt="Captura de pantalla 2026-08-20 184256" src="https://github.com/user-attachments/assets/68a62b65-8c04-47e0-a1f9-7864deec4282" />
+
+**Figure 1. Successful project compilation using Maven.** 
+This screenshot shows how the project compiles correctly in Maven.
+
+<img width="1429" height="645" alt="Captura de pantalla 2026-08-20 190443" src="https://github.com/user-attachments/assets/5e48ecdc-c35f-4eb6-b4e0-2ffb8e7d0773" />
+
+**Figure 2. Successful project compilation using Maven.**
+
+successful unit testing with Maven
+
+<img width="484" height="927" alt="Captura de pantalla 2026-08-20 190700" src="https://github.com/user-attachments/assets/14331022-a49a-4c24-99d1-98b1b9536cb3" />
+
+**Figure 3. Successful project compilation using Maven.**
+
+application execution and run method
+
+<img width="873" height="338" alt="Captura de pantalla 2026-08-20 190709" src="https://github.com/user-attachments/assets/a0bbcce7-2f46-43ed-8531-de784b617dfc" />
+
+**Figure 4. successful execution and result.**
 
 ## Challenge 7 — The Magic Remote Control
 
